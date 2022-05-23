@@ -10,8 +10,7 @@
 class Circle : public sf::CircleShape {
 public:
   Circle() : sf::CircleShape(rand() % 23 + 10) {
-    setFillColor({static_cast<sf::Uint8>(rand() % 256),
-                  static_cast<sf::Uint8>(rand() % 256),
+    setFillColor({static_cast<sf::Uint8>(rand() % 256), static_cast<sf::Uint8>(rand() % 256),
                   static_cast<sf::Uint8>(rand() % 256), 255});
     float speed = rand() % 80 + 20;
     vx = rand() % 2 == 0 ? speed : -speed;
@@ -84,10 +83,8 @@ int main() {
       return x > sw || y > sh || (x + d) < 0 || (y + d) < 0;
     });
 
-    fpsText.setString("FPS: " +
-                      std::to_string(1000000.f / dt.asMicroseconds()));
-    countText.setString("circles: " + std::to_string(circles.size()) + " / " +
-                        std::to_string(maxCircles));
+    fpsText.setString("FPS: " + std::to_string(1000000.f / dt.asMicroseconds()));
+    countText.setString("circles: " + std::to_string(circles.size()) + " / " + std::to_string(maxCircles));
   };
 
   auto render = [&]() {
