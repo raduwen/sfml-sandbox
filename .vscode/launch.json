@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "sandbox01",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/sandbox01/sandbox01",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/sandbox01",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
